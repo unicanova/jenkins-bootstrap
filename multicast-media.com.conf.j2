@@ -1,0 +1,21 @@
+server {
+        # SSL configuration
+
+        listen 443 ssl default_server;
+        listen [::]:443 ssl default_server;
+        access_log           /var/log/nginx/jenkins.access.log;
+        error_log            /var/log/nginx/jenkins.error.log;
+        root /var/www/html;
+        
+        ssl on;
+        ssl_certificate         /etc/ssl/multicast-media.com/multicast-media.com.crt;
+        ssl_certificate_key     /etc/ssl/multicast-media.com/multicast-media.com.key;          
+
+        server_name {{ item.value.server_name }}; 
+
+        location / {
+                proxy_pass          http://localhost:8080;
+                proxy_read_timeout  90s;
+       }
+}
+
