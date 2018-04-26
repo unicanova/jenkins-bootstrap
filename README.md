@@ -53,3 +53,5 @@ $ ansible-playbook play.yaml -b --extra-vars "ansible_sudo_pass=yourPassword"
 | ssl_certs_path | directory on the server, where will be placed certificates | '/etc/ssl/web' |
 | ssl_certs_privkey_path | path to private ket on the server | '/etc/ssl/web/web.key' |
 | ssl_certs_cert_path | path to certificate on the server | '/etc/ssl/web/web.crt' |
+| java_package | java package which will be installed on the server | openjdk-8-jdk |
+| jenkins_version | jenkins version which will be installed on the server | 2.89.4 |

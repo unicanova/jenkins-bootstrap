@@ -1,11 +1,11 @@
 ---
 - hosts: jenkinsmaster
   roles:
-    - role: wunzeco.java
+    - role: unicanova.java
       java_package: openjdk-8-jdk
-    - role: wunzeco.jenkins 
+    - role: unicanova.jenkins 
       jenkins_version: 2.89.4
-    - role: jdauphant.ssl-certs
+    - role: unicanova.ssl-certs
       ssl_certs_local_privkey_path: 'files/ssl/multicast-media.com.key'
       ssl_certs_local_cert_path: 'files/ssl/multicast-media.com.crt'
       ssl_certs_common_name: 'multicast-media.com'
@@ -14,7 +14,7 @@
       ssl_certs_path: '/etc/ssl/multicast-media.com'
       ssl_certs_privkey_path: '/etc/ssl/multicast-media.com/multicast-media.com.key'
       ssl_certs_cert_path: '/etc/ssl/multicast-media.com/multicast-media.com.crt'
-    - role: jdauphant.nginx
+    - role: unicanova.nginx
       nginx_sites:
         custom_bar:
           template: multicast-media.com.conf.j2
@@ -28,11 +28,3 @@
         backrefs: yes
     - name: Restart Jenkins
       service: name=jenkins state=restarted
-
-- hosts: jenkinslave
-  roles: 
-    - role: wunzeco.java
-      java_package: openjdk-8-jdk
-    - role: wunzeco.jenkins
-      jenkins_version: 2.89.4
-   

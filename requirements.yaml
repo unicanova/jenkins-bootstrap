@@ -1,0 +1,12 @@
+- src: https://github.com/unicanova/ansible-java
+  version: master
+  name: unicanova.java
+- src: https://github.com/unicanova/ansible-jenkins
+  version: master
+  name: unicanova.jenkins
+- src: https://github.com/unicanova/ansible-role-nginx
+  version: master
+  name: unicanova.nginx
+- src: https://github.com/unicanova/ansible-role-ssl-certs 
+  version: master
+  name: unicanova.ssl-certs
