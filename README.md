@@ -1,7 +1,6 @@
 # Documentation
 
 + [Quickstart](#Quickstart);
-+ [Run container](#Run);
 + [Example host file](#Ex1);
 + [Playbook variables](#Table1);
 
@@ -16,7 +15,8 @@ $ ansible-galaxy install jdauphant.ssl-certs
 $ git clone https://github.com/wunzeco/ansible-java && mv ansible-java ~/.ansible/roles/wunzeco.java
 $ git clone https://github.com/wunzeco/ansible-jenkins && mv ansible-jenkins ~/.ansible/roles/wunzeco.jenkins
 ```
-Clone this repository in your directory.
+Clone this repository in your directory:
+
 ```sh
 $ git clone https://github.com/zedit/ansible-jenkinsmaster_jenkinsslave 
 $ cd ansible-jenkinsmaster_jenkinsslave
@@ -47,7 +47,7 @@ $ ansible-playbook play.yaml --extra-vars "ansible_sudo_pass=yourPassword"
 | ------------- | --------------------- | ------------- |
 | ssl_certs_local_privkey_path | path to your privite key | 'files/ssl/web.key' |
 | ssl_certs_local_cert_path | path to your privite certificate | 'files/ssl/web.crt' |
-| ssl_certs_common_name |  | 'web' |
+| ssl_certs_common_name | certificate common name | 'web' |
 | ssl_certs_path_owner | owner of the directory | 'root' | 
 | ssl_certs_path_group | group | 'root' |   
 | ssl_certs_path | directory on the server, where will be placed certificates | '/etc/ssl/web' |
