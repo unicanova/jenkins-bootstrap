@@ -29,7 +29,7 @@ Ansible hosts file placed in /etc/ansible/
 Execute command  
 
 ```sh
-$ ansible-playbook play.yaml --extra-vars "ansible_sudo_pass=yourPassword"
+$ ansible-playbook play.yaml -b --extra-vars "ansible_sudo_pass=yourPassword"
 ```
 
 #### <a name="Ex1"></a> Example hosts file:
